@@ -1,0 +1,49 @@
+{
+  "name": "deepstream.io-storage-sequelize",
+  "version": "1.0.0",
+  "description": "A sequelize storage connector for use with Deepstream",
+  "main": "dist/connector.js",
+  "scripts": {
+    "build": "rm -rf ./dist; flow-remove-types ./src --out-dir ./dist;",
+    "lint": "yarn lint:js && yarn lint:flow",
+    "lint:js": "eslint -c .eslintrc --ignore-path .eslintignore --fix ./src ./test *.js",
+    "lint:flow": "flow --show-all-errors",
+    "coverage": "multi='dot=- html-cov=coverage.html' ./node_modules/mocha/bin/mocha -r blanket --reporter mocha-multi --no-colors; open coverage.html",
+    "postinstall": "flow-typed install --overwrite",
+    "test": "yarn lint && yarn test:js",
+    "test:all": "yarn test && yarn test:js",
+    "test:js": "mocha -r flow-remove-types/register test/*.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bunchtogether/deepstream.io-storage-riak.git"
+  },
+  "author": "deepstreamHub GmbH",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/bunchtogether/deepstream.io-storage-riak/issues"
+  },
+  "homepage": "https://github.com/bunchtogether/deepstream.io-storage-sequelize",
+  "dependencies": {
+    "sequelize": "^4.10.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.0.0",
+    "chai": "^4.1.2",
+    "coveralls": "^2.13.1",
+    "eslint": "^4.7.2",
+    "eslint-config-bunchtogether": "^1.1.0",
+    "eslint-plugin-flowtype": "^2.35.1",
+    "eslint-plugin-flowtype-errors": "^3.3.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.3.0",
+    "flow-bin": "^0.55.0",
+    "flow-remove-types": "^1.2.1",
+    "flow-typed": "^2.1.5",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.5.3",
+    "sqlite3": "^3.1.11",
+    "uuid": "^3.1.0"
+  }
+}
