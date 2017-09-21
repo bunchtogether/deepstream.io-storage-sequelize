@@ -1,6 +1,6 @@
 {
   "name": "deepstream.io-storage-sequelize",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A sequelize storage connector for use with Deepstream",
   "main": "dist/connector.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "lint:js": "eslint -c .eslintrc --ignore-path .eslintignore --fix ./src ./test *.js",
     "lint:flow": "flow --show-all-errors",
     "coverage": "multi='dot=- html-cov=coverage.html' ./node_modules/mocha/bin/mocha -r blanket --reporter mocha-multi --no-colors; open coverage.html",
-    "postinstall": "flow-typed install --overwrite",
+    "flow-typed": "flow-typed install --overwrite",
     "test": "yarn lint && yarn test:js",
     "test:all": "yarn test && yarn test:js",
     "test:js": "mocha -r flow-remove-types/register test/*.test.js"
