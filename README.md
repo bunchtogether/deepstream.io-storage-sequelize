@@ -1,2 +1,2 @@
-# deepstream.io-storage-riak
-Riak TS Database connector for deepstream.io
+# deepstream.io-storage-sequelize
+Sequelize storage connector for deepstream.io
