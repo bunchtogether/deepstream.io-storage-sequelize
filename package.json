@@ -1,6 +1,6 @@
 {
   "name": "deepstream.io-storage-sequelize",
-  "version": "1.0.1",
+  "version": "1.2.0",
   "description": "A sequelize storage connector for use with Deepstream",
   "main": "dist/connector.js",
   "scripts": {

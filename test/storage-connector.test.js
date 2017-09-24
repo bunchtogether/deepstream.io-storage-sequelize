@@ -5,7 +5,9 @@ const Connector = require('../src/connector');
 const EventEmitter = require('events').EventEmitter;
 const Sequelize = require('sequelize');
 
-const database = new Sequelize('sqlite://:memory:');
+const CONNECTION_STRING = process.env.CONNECTION_STRING || 'sqlite://:memory:';
+
+const database = new Sequelize(CONNECTION_STRING);
 
 describe('the message connector has the correct structure', () => {
   let connector;
